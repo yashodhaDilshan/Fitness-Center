@@ -19,7 +19,7 @@ public class  AppInitializer extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        Parent parent = FXMLLoader.load(this.getClass().getResource("view/MainMenu.fxml")); //view/LoginForm.fxml
+        Parent parent = FXMLLoader.load(this.getClass().getResource("view/LoginForm.fxml"));
         Scene scene = new Scene(parent);
         primaryStage.setScene(scene);
         primaryStage.centerOnScreen();
