@@ -1,0 +1,88 @@
+CREATE DATABASE fitnesscenter;
+
+CREATE TABLE Member(
+    MemberId int,
+    memberName varchar(100),
+    Nic varchar(15),
+    Phoneno int,
+    Age varchar(2),
+    Weight double,
+    Height double,
+    Gender varchar(10),
+    Goal varchar(40),
+    Address varchar(100), 
+    PRIMARY KEY(MemberId)
+);
+
+CREATE TABLE additems(
+    Itemid int,
+    ItemName varchar(50),
+    BrandName varchar(50),
+    Price double,    
+    Size double,
+    Qty int,
+    About varchar(50),   
+    PRIMARY KEY(Itemid)
+);
+
+CREATE TABLE employee(
+    TrainerId int,
+    TrainerName varchar(50),
+    Nic varchar(15),
+    Age int,
+    Gender varchar(10),
+    Phoneno int,
+    Address varchar(50),   
+    PRIMARY KEY(TrainerId)
+);
+
+CREATE TABLE Suppliers(
+    SupplierId int,
+    SupplierName varchar(50),
+    Nic varchar(15),    
+    Phoneno int,
+    Address varchar(50),   
+    PRIMARY KEY(SupplierId)
+);
+
+CREATE TABLE membershipPayment(
+    MemberId int,  
+    Type varchar(10),
+    paymentdate Date,    
+    expirydate Date,    
+    PRIMARY KEY(MemberId)
+);
+
+CREATE TABLE Orders(
+    OrderId int,  
+    ItemId int,  
+    ItemName varchar(10),
+    Price int, 
+    Qty int,  
+    Total int,
+    MemberId int,
+    PayDate date,
+    PRIMARY KEY(OrderId)    
+);
+
+CREATE TABLE EmployeeSalary(
+    SalaryId int,
+    TrainerId int,      
+    Name varchar(10),
+    Salary double, 
+    Allowance double,
+    Total double,    
+    PayDate date,
+    Status varchar(10),
+    PRIMARY KEY(SalaryId)    
+);
+
+
+
+
+
+
+
+
+
+
