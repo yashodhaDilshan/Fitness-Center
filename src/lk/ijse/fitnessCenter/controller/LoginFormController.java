@@ -45,7 +45,7 @@ public class LoginFormController {
         if(txtUserName.getText().equals("") && txtPassword.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Please Enter Details");
         }
-        else if(txtUserName.getText().equals("yash") && txtPassword.getText().equals("1234")){
+        else if(txtUserName.getText().equals("Yash") && txtPassword.getText().equals("1234")){
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/MainMenu.fxml"));
             parent = loader.load();
