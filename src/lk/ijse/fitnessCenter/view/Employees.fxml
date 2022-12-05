@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="710.0" prefWidth="966.0" style="-fx-background-color: ht;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fitnessCenter.controller.EmployeesController">
+    <children>
+      <AnchorPane layoutY="44.0" prefHeight="665.0" prefWidth="1005.0">
+         <children>
+            <ImageView fitHeight="666.0" fitWidth="1011.0" layoutY="-12.0">
+               <image>
+                  <Image url="@../Assests/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnAddTrainer" layoutX="232.0" layoutY="321.0" mnemonicParsing="false" onAction="#btnAddTrainerOnAction" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00b894; -fx-background-radius: 30;" text="Add Trainer" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="txtTrainerName" layoutX="305.0" layoutY="153.0" prefHeight="30.0" prefWidth="339.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtAge" layoutX="743.0" layoutY="153.0" prefHeight="30.0" prefWidth="77.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="691.0" layoutY="156.0" text="Age" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="185.0" layoutY="255.0" text="Address" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTrainerNic" layoutX="620.0" layoutY="105.0" prefHeight="30.0" prefWidth="203.0" AnchorPane.topAnchor="105.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="566.0" layoutY="108.0" text="Nic" textFill="WHITE" AnchorPane.topAnchor="108.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTrainerPhoneNo" layoutX="617.0" layoutY="203.0" prefHeight="30.0" prefWidth="203.0" AnchorPane.leftAnchor="617.0" AnchorPane.topAnchor="203.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="524.0" layoutY="206.0" text="Phone No." textFill="WHITE" AnchorPane.topAnchor="206.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="188.0" layoutY="153.0" text="Full Name" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="428.0" layoutY="321.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: orange; -fx-background-radius: 30;" text="UpdateTrainer" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="628.0" layoutY="321.0" mnemonicParsing="false" onAction="#btnDeleteTrainerOnAction" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #b71540; -fx-background-radius: 30;" text="DeleteTrainer" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="txtTrainerId" layoutX="305.0" layoutY="107.0" prefHeight="30.0" prefWidth="77.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="188.0" layoutY="109.0" prefHeight="25.0" prefWidth="106.0" text="Trainer ID" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTrainerAddress" layoutX="305.0" layoutY="252.0" prefHeight="30.0" prefWidth="516.0" AnchorPane.topAnchor="252.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Pane layoutX="-86.0" layoutY="14.0" prefHeight="47.0" prefWidth="272.0" style="-fx-background-color: #0652DD; -fx-background-radius: 30;">
+               <children>
+                  <Text fx:id="lblDate" fill="WHITE" layoutX="159.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2022:11:23">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="lblTime" fill="WHITE" layoutX="159.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="17:37:44">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="111.0" layoutY="3.0" text="Date" textFill="WHITE" />
+                  <Label layoutX="111.0" layoutY="24.0" text="Time" textFill="WHITE" />
+               </children>
+            </Pane>
+            <TextField fx:id="txtGender" layoutX="305.0" layoutY="203.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="188.0" layoutY="203.0" text="Gender" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="404.0" layoutY="106.0" mnemonicParsing="false" onAction="#btntestonaction" prefHeight="29.0" prefWidth="14.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="btnSearchId" fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/icons8-search-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+        <Label layoutX="447.0" layoutY="8.0" prefHeight="20.0" prefWidth="106.0" text="Employee Menu">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnExit" layoutX="972.0" layoutY="17.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: red; -fx-background-radius: 50;" text="X" textFill="WHITE" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Button fx:id="btnMinimize" layoutX="942.0" layoutY="17.0" mnemonicParsing="false" onAction="#btnMinimizeOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(5, 196, 107); -fx-background-radius: 50;" text="_" textFill="WHITE" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="5.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="14.0" layoutY="35.0" stroke="WHITE" strokeType="INSIDE" width="1010.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="35.0" />
+        <Button fx:id="btnBack" layoutX="24.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: orange; -fx-background-radius: 50;" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <graphic>
+                <ImageView fitHeight="17.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Image/icons8-chevron-left-50.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <TableView fx:id="tblTrainer" layoutX="59.0" layoutY="437.0" prefHeight="226.0" prefWidth="883.0" style="-fx-background-color: #ced6e0;" AnchorPane.topAnchor="437.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="47.0" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="200.0" text="Name" />
+            <TableColumn fx:id="colAge" minWidth="0.0" prefWidth="63.0" text="Age" />
+            <TableColumn fx:id="colNic" prefWidth="128.0" text="NIC" />
+            <TableColumn fx:id="colGender" prefWidth="65.0" text="Gender" />
+            <TableColumn fx:id="colPhoneNo" prefWidth="137.0" text="Phone No" />
+            <TableColumn fx:id="colAddress" prefWidth="242.0" text="Address" />
+            </columns>
+        </TableView>
+      <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="413.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assests/Icon.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

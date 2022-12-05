@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="690.0" prefWidth="1011.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fitnessCenter.controller.MembershipPayemtsController">
+   <children>
+      <Label layoutX="433.0" layoutY="8.0" prefHeight="20.0" prefWidth="134.0" text="Membership Payemts">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnExit" layoutX="962.0" layoutY="7.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: red; -fx-background-radius: 50;" text="X" textFill="WHITE" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnMinimize" layoutX="932.0" layoutY="7.0" mnemonicParsing="false" onAction="#btnMinimizeOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(5, 196, 107); -fx-background-radius: 50;" text="_" textFill="WHITE" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="666.0" fitWidth="1011.0" layoutX="9.0" layoutY="11.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <image>
+            <Image url="@../Assests/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="11.0" layoutX="4.0" layoutY="32.0" stroke="WHITE" strokeType="INSIDE" width="1011.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="35.0" />
+      <TextField fx:id="txtSearchBar" layoutX="344.0" layoutY="309.0" prefHeight="30.0" prefWidth="328.0" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="637.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnSearchOnAction" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;" AnchorPane.topAnchor="309.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="btnSearch" fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/icons8-search-50.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnBack" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: orange; -fx-background-radius: 50;" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="11.0" onDragDetected="#btnBackOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/icons8-chevron-left-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="tblMembershipPayments" layoutX="56.0" layoutY="368.0" prefHeight="309.0" prefWidth="883.0">
+        <columns>
+            <TableColumn fx:id="colMemberId" prefWidth="103.0" text="Member Id" />
+          <TableColumn fx:id="colType" prefWidth="187.0" text="Membership Type" />
+            <TableColumn fx:id="colPayDate" prefWidth="183.0" text="Payment date" />
+            <TableColumn fx:id="colExpireDate" prefWidth="205.0" text="Expiryer Date" />
+            <TableColumn fx:id="colSituation" prefWidth="203.0" text="Sitiation" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cmbMembership" layoutX="479.0" layoutY="168.0" prefWidth="150.0" promptText="Select Membership" />
+      <TextField fx:id="txtMemberId" layoutX="479.0" layoutY="123.0" prefHeight="30.0" prefWidth="150.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="317.0" layoutY="126.0" prefHeight="25.0" prefWidth="106.0" text="Member ID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="317.0" layoutY="168.0" prefHeight="25.0" prefWidth="150.0" text="Membership Type" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Pane layoutX="-80.0" layoutY="57.0" prefHeight="47.0" prefWidth="272.0" style="-fx-background-color: #0652DD; -fx-background-radius: 30;">
+         <children>
+            <Text fx:id="lblDate" fill="WHITE" layoutX="159.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="lblTime" fill="WHITE" layoutX="159.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Label layoutX="111.0" layoutY="3.0" text="Date" textFill="WHITE" />
+            <Label layoutX="111.0" layoutY="24.0" text="Time" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Button fx:id="btnBuy" layoutX="322.0" layoutY="221.0" mnemonicParsing="false" onAction="#btnBuyOnAction" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: #00b894; -fx-background-radius: 20;" text="Buy" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="643.0" layoutY="124.0" mnemonicParsing="false" onAction="#btnSearchMemberOnAction" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="btnSearch1" fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/icons8-search-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="lblMemberName" layoutX="787.0" layoutY="68.0" prefHeight="25.0" prefWidth="177.0" text="Member Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnUpdate" layoutX="445.0" layoutY="221.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: orange; -fx-background-radius: 20;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="567.0" layoutY="221.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: #b71540; -fx-background-radius: 20;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="764.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnDuePaymentOnAction" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 20;" text="Due Payments" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="287.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnReloadOnAction" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="btnSearch11" fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/Refresh.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

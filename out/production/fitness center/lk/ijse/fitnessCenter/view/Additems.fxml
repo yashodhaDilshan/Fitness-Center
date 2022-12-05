@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="683.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fitnessCenter.controller.AdditemsController">
+    <children>
+        <Label layoutX="483.0" layoutY="8.0" prefHeight="20.0" prefWidth="35.0" text="Store" AnchorPane.topAnchor="8.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnExit" layoutX="972.0" layoutY="17.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: red; -fx-background-radius: 50;" text="X" textFill="WHITE" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Button fx:id="btnMinimize" layoutX="942.0" layoutY="17.0" mnemonicParsing="false" onAction="#btnMinimizeOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(5, 196, 107); -fx-background-radius: 50;" text="_" textFill="WHITE" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="5.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Button fx:id="btnBack" layoutX="24.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: orange; -fx-background-radius: 50;" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <graphic>
+                <ImageView fitHeight="17.0" fitWidth="11.0" onDragDetected="#btnBackOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Image/icons8-chevron-left-50.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+      <Separator layoutX="2.0" layoutY="30.0" prefHeight="8.0" prefWidth="1000.0" style="-fx-background-color: black;" AnchorPane.topAnchor="35.0" />
+      <ImageView fitHeight="649.0" fitWidth="1006.0" layoutX="-2.0" layoutY="99.0" AnchorPane.leftAnchor="-2.0" AnchorPane.topAnchor="40.0">
+         <image>
+            <Image url="@../Assests/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtSearchBar" layoutX="326.0" layoutY="304.0" prefHeight="30.0" prefWidth="350.0" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="641.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnSearchTableOnAction" prefHeight="29.0" prefWidth="14.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;" AnchorPane.topAnchor="304.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="btnSearch" fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/icons8-search-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Pane layoutX="-90.0" layoutY="59.0" prefHeight="47.0" prefWidth="272.0" style="-fx-background-color: #0652DD; -fx-background-radius: 30;">
+         <children>
+            <Text fx:id="lblDate" fill="WHITE" layoutX="159.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="lblTime" fill="WHITE" layoutX="159.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Label layoutX="111.0" layoutY="3.0" text="Date" textFill="WHITE" />
+            <Label layoutX="111.0" layoutY="24.0" text="Time" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label layoutX="128.0" layoutY="119.0" text="Item id" textFill="WHITE" AnchorPane.topAnchor="119.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="128.0" layoutY="170.0" text="Size (lbs)" textFill="WHITE" AnchorPane.topAnchor="170.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="607.0" layoutY="117.0" text="Brand name" textFill="WHITE" AnchorPane.topAnchor="115.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="272.0" layoutY="171.0" text="Qty" textFill="WHITE" AnchorPane.topAnchor="171.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="397.0" layoutY="171.0" text="Price" textFill="WHITE" AnchorPane.topAnchor="171.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtItemId" layoutX="128.0" layoutY="140.0" prefHeight="27.0" prefWidth="60.0">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <TextField fx:id="txtSize" layoutX="128.0" layoutY="193.0" prefHeight="27.0" prefWidth="89.0">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <TextField fx:id="txtBrandName" layoutX="602.0" layoutY="137.0" prefHeight="27.0" prefWidth="306.0">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <TextField fx:id="txtQty" layoutX="269.0" layoutY="194.0" prefHeight="27.0" prefWidth="89.0" AnchorPane.leftAnchor="269.0">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <TextField fx:id="txtPrice" layoutX="397.0" layoutY="194.0" prefHeight="27.0" prefWidth="154.0">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <Button layoutX="238.0" layoutY="246.0" mnemonicParsing="false" onAction="#btnAddItemOnAction" prefHeight="25.0" prefWidth="148.0" style="-fx-background-radius: 20; -fx-background-color: #00b894;" text="Add" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="427.0" layoutY="246.0" mnemonicParsing="false" onAction="#btnUpdateItemOnAction" prefHeight="25.0" prefWidth="148.0" style="-fx-background-radius: 20; -fx-background-color: orange;" text="Update" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="615.0" layoutY="246.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="148.0" style="-fx-background-radius: 20; -fx-background-color: #b71540;" text="Delete" textFill="#f5f2f2">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tblItems" layoutX="24.0" layoutY="358.0" prefHeight="313.0" prefWidth="953.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="55.0" text="Id" />
+          <TableColumn fx:id="colItemName" minWidth="5.666664123535156" prefWidth="216.0" text="Item name" />
+            <TableColumn fx:id="colBrandName" prefWidth="227.0" text="Brand name" />
+            <TableColumn fx:id="colSize" prefWidth="88.0" text="Size (lbs)" />
+            <TableColumn fx:id="colQty" prefWidth="85.0" text="Qty" />
+            <TableColumn fx:id="colPrice" prefWidth="143.0" text="Price" />
+            <TableColumn fx:id="colAbout" prefWidth="137.0" text="About" />
+        </columns>
+      </TableView>
+      <Label layoutX="272.0" layoutY="119.0" text="Item name" textFill="WHITE" AnchorPane.topAnchor="115.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtItemName" layoutX="271.0" layoutY="139.0" prefHeight="27.0" prefWidth="280.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="602.0" layoutY="168.0" text="About (Item Or Suppliment)" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAbout" layoutX="602.0" layoutY="191.0" prefHeight="27.0" prefWidth="306.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button layoutX="200.0" layoutY="136.0" mnemonicParsing="false" onAction="#btntestonaction" prefHeight="29.0" prefWidth="14.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="btnSearchId" fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/icons8-search-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="279.0" layoutY="304.0" mnemonicParsing="false" onAction="#btnReloadOnAction" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="btnSearch1" fitHeight="17.0" fitWidth="19.0" onDragDetected="#btnReloadOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/Refresh.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+
+    </children>
+</AnchorPane>
