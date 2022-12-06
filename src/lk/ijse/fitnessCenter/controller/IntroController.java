@@ -1,11 +1,10 @@
 package lk.ijse.fitnessCenter.controller;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
+
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ProgressBar;
@@ -24,14 +23,10 @@ public class IntroController implements Initializable{
     @FXML
     private ProgressBar pbIntro;
     @FXML
-    private ProgressIndicator progressIndicator;
-    @FXML
     private Text loadingText;
     @FXML
     private AnchorPane rootPane;
-
     LoadingScreen loadingScreen;
-
 
 
     @Override
@@ -42,13 +37,6 @@ public class IntroController implements Initializable{
         thread.setDaemon(true);
         thread.start();
     }
-
-    @FXML
-    void restart(ActionEvent event) {
-        pbIntro.setProgress(0);
-        loadingText.setText("Loading...");
-    }
-
 
     //Loading screen runnable class
     public class LoadingScreen implements Runnable {
@@ -81,11 +69,17 @@ public class IntroController implements Initializable{
                     }
                 }
 
-                loadingText.setText(String.valueOf(load) + " %");
-                load = load + 10;
+                if (load == 0){
+                    loadingText.setText(String.valueOf(load) + " %");
+                    load = load + 10;
+                }
+                else {
+                    load = load + 10;
+                    loadingText.setText(String.valueOf(load) + " %");
+                }
             }
 
-
+            // Load to Login
             Platform.runLater(new Runnable() {
                 @Override
                 public void run() {
@@ -104,8 +98,6 @@ public class IntroController implements Initializable{
                     rootPane.getScene().getWindow().hide();
                 }
             });
-
-
         }
     }
 }
